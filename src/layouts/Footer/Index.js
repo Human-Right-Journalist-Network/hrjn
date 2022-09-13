@@ -1,16 +1,16 @@
 import React from 'react'
-import logo from '../../assets/white_logo.png'
 import { Link } from 'react-router-dom'
+import logo from '../../white_logo.png'
 
 export default function Footer() {
   return (
-    <footer className="footer-1 py-8 sm:py-12 text-white bg-blue-800" >
+    <footer className="footer-1 py-8 sm:py-12 text-white bg-[#0B0706]" >
       <div className="container mx-auto px-4">
         <div className="sm:flex sm:flex-wrap sm:-mx-4 md:py-4">
           <div className="px-4 sm:w-1/2 md:w-1/4 xl:w-1/6">
             <div className="flex-shrink-0 flex items-center">
               <Link to="/">
-                <img className="block h-14 w-auto" src={logo} alt="Workflow" />
+                <img className="block h-14 w-auto" src={logo} />
               </Link>
             </div>
           </div>
@@ -20,7 +20,8 @@ export default function Footer() {
             <li className="mb-2"><a href="#" className="">About Us</a></li>
               <li className="mb-2"><a href="#" className="text-left">Team</a></li>
               <li className="mb-2"><a href="#" className="">What We Do</a></li>
-              <li className="mb-2"><a href="#" className="">Contact</a></li>
+              <li className="mb-2"><a href="/media" className="">Media</a></li>
+              <li className="mb-2"><a href="contact" className="">Contact</a></li>
             </ul>
           </div>
 

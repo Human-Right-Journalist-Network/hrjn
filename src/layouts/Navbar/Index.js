@@ -2,15 +2,15 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'react-router-dom'
-import logo from '../../assets/white_logo.png'
+import logo from '../../white_logo.png'
 
 const navigation = [
   { name: 'Home', href: '/', current: false },
   { name: 'About Us', href: '#', current: false },
   { name: 'What We Do', href: '#', current: false },
-  { name: 'Media', href: '#', current: false },
-  { name: 'Contact', href: '#', current: false },
-  { name: 'Donate', href: '#', current: true },
+  { name: 'Media', href: '/media', current: false },
+  { name: 'Contact', href: '/contact', current: false },
+  { name: 'Donate', href: '/donation', current: true },
 ]
 
 function classNames(...classes) {
@@ -19,7 +19,7 @@ function classNames(...classes) {
 
 export default function Example() {
   return (
-    <Disclosure as="nav" className="bg-blue-800 text-white">
+    <Disclosure as="nav" className="bg-black text-white">
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -37,19 +37,18 @@ export default function Example() {
               </div>
               <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="flex-shrink-0 flex items-center">
-                  <Link to="https://github.com/facebook">
+                  <Link to="/">
                     <img
                       className="block lg:hidden h-12 w-auto"
-                      src={logo}
-                      alt="Workflow"
+                      src={logo} alt="logo"
+                      alt="logo"
                     />
                   </Link>
           
                   <Link to="/">
                     <img
                       className="hidden lg:block h-8 w-auto"
-                      src={logo}
-                      alt="Workflow"
+                      src={logo} alt="logo"
                     />
                   </Link>
                 </div>
@@ -63,7 +62,7 @@ export default function Example() {
                         key={item.name}
                         href={item.href}
                         className={classNames(
-                          item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
+                          item.current ? 'bg-blue-700 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                           'px-3 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined}
